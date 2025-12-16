@@ -209,7 +209,7 @@ function change_tahunbuku()
         <td width="15%"><strong>Departemen </strong></font></td>
         <td colspan="4">
         <select name="departemen" id="departemen" style="width:115px" onchange="change_dep()" onKeyPress="return focusNext('tgl1',event)" onfocus="panggil('departemen')">
-        <?	$dep = getDepartemen(getAccess());
+        <?	$dep = THDS_getDepartemen(THDS_getAccess());
             foreach ($dep as $value) { 
 				if ($departemen == "")
                 	$departemen = $value;

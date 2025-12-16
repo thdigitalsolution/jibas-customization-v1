@@ -68,7 +68,7 @@ OpenDb();
     <td width="15%"><font color="#000000"><strong>Departemen</strong></font></td>
     <td><select name="depart1" id="depart1" onChange="change_departemen(1)" style="width:150px" onkeypress="return focusNext('nis', event)">
     	<option value=-1>(Semua Departemen)</option>
-	<?	$dep = getDepartemen(getAccess());    
+	<?	$dep = THDS_getDepartemen(THDS_getAccess());
         foreach($dep as $value) {
             if ($departemen == "")
                 $departemen = $value; ?>

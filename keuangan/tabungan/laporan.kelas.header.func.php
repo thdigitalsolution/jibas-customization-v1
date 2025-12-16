@@ -52,7 +52,7 @@ function SelectDepartemen()
 ?>
     <select id="departemen" name="departemen" style="width:188px" onchange="change_dep()"
             onKeyPress="return focusNext('idangkatan', event)">
-<?  $dep = getDepartemen(getAccess());
+<?  $dep = THDS_getDepartemen(THDS_getAccess());
     foreach($dep as $value)
     {
         if ($departemen == "")

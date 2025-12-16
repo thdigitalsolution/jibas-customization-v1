@@ -52,7 +52,7 @@ OpenDb();
     <input type="hidden" name="depart" id="depart" value="<?=$_REQUEST['departemen']?>" />-->
     <select name="depart" id="depart" onChange="change_departemen(0)" style="width:155px" onkeypress="return focusNext('tingkat', event)">
    
-	<?	$dep = getDepartemen(getAccess());    
+	<?	$dep = THDS_getDepartemen(THDS_getAccess());    
         foreach($dep as $value) {
             if ($departemen == "")
                 $departemen = $value; ?>

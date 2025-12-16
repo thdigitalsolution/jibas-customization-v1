@@ -186,7 +186,7 @@ function focusNext(elemName, evt) {
     	<select id="departemen" name="departemen" style="width:188px" onchange="change_dep()" onKeyPress="return focusNext('idangkatan', event)">
    <?
         OpenDb();
-        $dep = getDepartemen(getAccess());
+        $dep = THDS_getDepartemen(THDS_getAccess());
         foreach($dep as $value) {
             if ($departemen == "")
                 $departemen = $value; ?>

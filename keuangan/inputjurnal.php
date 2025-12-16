@@ -357,7 +357,7 @@ function focusNext(elemName, evt) {
             <td width="12%" align="left"><strong>Departemen </strong></td>
             <td colspan="2">
                 <select name="departemen" id="departemen" style="background-color:#FFFF99;width:180px" onChange="change_dep()" onKeyPress="return focusNext('keperluan', event)">
-    <?          $dep = getDepartemen(getAccess());
+    <?          $dep = THDS_getDepartemen(THDS_getAccess());
                 foreach($dep as $value) {
                     if ($departemen == "")
                         $departemen = $value; ?>

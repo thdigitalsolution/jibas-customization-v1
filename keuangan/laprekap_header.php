@@ -139,7 +139,7 @@ function change_date()
    <?   if (getAccess() == "ALL")
    		    echo  "<option value='ALL' selected>(Semua)</option>";
 			
-        $dep = getDepartemen(getAccess());
+        $dep = THDS_getDepartemen(THDS_getAccess());
         foreach($dep as $value) 
 		{
 			$sel = $dept == $value ? "selected" : ""; ?>

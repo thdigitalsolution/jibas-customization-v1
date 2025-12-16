@@ -224,7 +224,7 @@ OpenDb();
             <td align="left">
             <select name="departemen" id="departemen" style="width:100px" onKeyPress="return focusNext('ttutup', event)">
             <?
-            $dep = getDepartemen(getAccess());
+            $dep = THDS_getDepartemen(THDS_getAccess());
             foreach($dep as $value) 
             {  ?>
                 <option value="<?=$value ?>"><?=$value ?></option>

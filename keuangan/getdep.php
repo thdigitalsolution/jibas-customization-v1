@@ -1,4 +1,5 @@
 <?
+
 /**[N]**
  * JIBAS Education Community
  * Jaringan Informasi Bersama Antar Sekolah
@@ -29,18 +30,31 @@ require_once('include/config.php');
 $status_user = $_REQUEST['tingkat'];
 ?>
 <select name="departemen" id="departemen" style="width:165px;" onKeyPress="return focusNext('keterangan', event)" onFocus="panggil('tt')">
-	<?  if ($status_user == 1 || $status_user == ""){	
-		echo  "<option value='' selected='selected'>Semua</option>";
-	} else {
-		OpenDb();
-		$query_pro = "SELECT departemen FROM jbsakad.departemen WHERE aktif=1 ORDER BY urutan ASC";
-		$result_pro = QueryDb($query_pro);
-	
-		$i = 0;
-		while($row_pro = @mysqli_fetch_array($result_pro)) {
-			echo  "<option value='$row_pro[departemen]' $sel[$i]>$row_pro[departemen]</option>";
-			$i++;
-		}
+	<? 
+	// if ($status_user == 1 || $status_user == "") {
+	// 	echo  "<option value='' selected='selected'>Semua</option>";
+	// } else {
+	// 	OpenDb();
+	// 	$query_pro = "SELECT departemen FROM jbsakad.departemen WHERE aktif=1 ORDER BY urutan ASC";
+	// 	$result_pro = QueryDb($query_pro);
+
+	// 	$i = 0;
+	// 	while ($row_pro = @mysqli_fetch_array($result_pro)) {
+	// 		echo  "<option value='$row_pro[departemen]' $sel[$i]>$row_pro[departemen]</option>";
+	// 		$i++;
+	// 	}
+	// }
+
+	// THDS
+
+	OpenDb();
+	$query_pro = "SELECT departemen FROM jbsakad.departemen WHERE aktif=1 ORDER BY urutan ASC";
+	$result_pro = QueryDb($query_pro);
+
+	$i = 0;
+	while ($row_pro = @mysqli_fetch_array($result_pro)) {
+		echo  "<option value='$row_pro[departemen]' $sel[$i]>$row_pro[departemen]</option>";
+		$i++;
 	}
-?>
-	</select>
+	?>
+</select>

@@ -53,7 +53,7 @@ OpenDb();
     <input type="hidden" name="depart3" id="depart3" value="<?=$_REQUEST['departemen']?>" />
     <!--<select name="depart3" id="depart3" onChange="change_departemen(3)" style="width:130px" onkeypress="return focusNext('nama', event)">
     	<option value=-1>(Semua Dept.)</option>
-	<?	$dep = getDepartemen(getAccess());    
+	<?	$dep = THDS_getDepartemen(THDS_getAccess());    
         foreach($dep as $value) {
             if ($departemen == "")
                 $departemen = $value; ?>

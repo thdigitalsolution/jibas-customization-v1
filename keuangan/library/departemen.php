@@ -35,4 +35,22 @@ function getDepartemen($access) {
 	}
 	return $dep;
 }
+
+
+
+function THDS_getDepartemen($access) {
+
+	if ($access == "ALL") {
+		$sql = "SELECT departemen FROM jbsakad.departemen WHERE aktif=1 ORDER BY urutan";
+		$result = QueryDb($sql);
+		$i = 0;
+		while($row = mysqli_fetch_row($result)) {
+			$dep[$i] = $row[0];
+			$i++;
+		}
+	} else {
+		$dep[0] = $access;
+	}
+	return $dep;
+}
 ?>

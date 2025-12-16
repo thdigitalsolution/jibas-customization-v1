@@ -220,7 +220,7 @@ function change_urut(urut,urutan) {
         <td align="left" width="30%"><strong>Departemen&nbsp;</strong>
     	<select name="departemen" id="departemen" onChange="change_dep()">
 <?		OpenDb();
-		$dep = getDepartemen(getAccess());
+		$dep = THDS_getDepartemen(THDS_getAccess());
 		foreach ($dep as $value) { 
 			if ($departemen == "")
 				$departemen = $value ?>

@@ -46,6 +46,7 @@ $username = "'$username'";
 $password = str_replace("'", "\'", $password);
 
 $user_exists = false;
+
 if ($login == "landlord")
 {
 	$sql_la = "SELECT password FROM jbsuser.landlord";
@@ -76,6 +77,7 @@ else
 	$result = QueryDb($sql);
 	$row = mysqli_fetch_array($result);
 	$jum = mysqli_num_rows($result);
+
 	if ($jum > 0)
 	{
 		if ($row['aktif'] == 0)
@@ -114,10 +116,19 @@ else
 					$_SESSION['namakeuangan'] = $row3['nama'];
 					$_SESSION['tingkatkeuangan'] = $row3['tingkat'];
 					$_SESSION['temakeuangan'] = $row3['tema'];
-					if ($row3['tingkat']==2)
-						$_SESSION['departemenkeuangan'] = $row3['departemen'];
-					else 
-						$_SESSION['departemenkeuangan'] = "ALL";
+
+                    // THDS: 
+                    // setting agar session dept agar user tingkat 1 dan 2 mendapatkan `$_SESSION['departemenkeuangan'] = $row3['departemen'];`
+                    // 
+					// if ($row3['tingkat']==2)
+					// 	$_SESSION['departemenkeuangan'] = $row3['departemen'];
+					// else 
+					// 	$_SESSION['departemenkeuangan'] = "ALL";
+
+                    $_SESSION['departemenkeuangan'] = $row3['departemen'];
+						
+
+                    
 								
 					$user_exists = true;
 				}

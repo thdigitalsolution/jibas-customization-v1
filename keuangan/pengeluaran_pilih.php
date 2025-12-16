@@ -69,7 +69,7 @@ function change_dep() {
     <td align="left" width="100%">
     <p><strong>Departemen&nbsp;</strong> 
     <select name="departemen" id="departemen" onchange="change_dep()" style="width:150px;">
-<?	$dep = getDepartemen(getAccess());
+<?	$dep = THDS_getDepartemen(THDS_getAccess());
     foreach($dep as $value) {
         if ($departemen == "")
             $departemen = $value; ?>
