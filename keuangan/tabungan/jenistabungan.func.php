@@ -84,7 +84,7 @@ function ShowSelectDepartemen()
     global $departemen;
     
     echo "<select name='departemen' id='departemen' onChange='change_dep()' style='width:200px'>";
-    $dep = getDepartemen(getAccess());
+    $dep = THDS_getDepartemen(THDS_getAccess());
 	foreach($dep as $value)
     { 
         if ($departemen == "") $departemen = $value;

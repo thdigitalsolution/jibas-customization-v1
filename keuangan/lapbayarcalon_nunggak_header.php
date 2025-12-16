@@ -183,7 +183,7 @@ function focusNext(elemName, evt) {
         <td width="15%"><strong>Departemen </strong></td>
         <td>
     	<select id="departemen" name="departemen" style="width:188px" onchange="change_dep()" onKeyPress="return focusNext('kelompok',event)">
-   <?   $dep = getDepartemen(getAccess());
+   <?   $dep = THDS_getDepartemen(THDS_getAccess());
         foreach($dep as $value) {
             if ($departemen == "")
                 $departemen = $value; ?>

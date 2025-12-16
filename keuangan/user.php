@@ -217,11 +217,18 @@ function change_baris() {
     	<td align="center"><?=++$cnt ?></td>
         <td align="center"><?=$row['login'] ?></td>
         <td><?=$row['nama'] ?></td>
-         <td align="center"><?	if ($row['tingkat']==1){
-					echo  "Semua Departemen";
-				} else {
-					echo  $row['departemen'];
-				}
+        <td align="center">
+            <?	
+                /*
+                    if ($row['tingkat']==1){
+                        echo  "Semua Departemen";
+                    } else {
+                        echo  $row['departemen'];
+                    }
+                */
+
+                // THDS
+                echo  $row['departemen'];
 			?>
        	</td>
         <td align="center">

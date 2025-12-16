@@ -25,7 +25,7 @@ function ShowSelectDepartemen()
 {
     global $departemen;
 
-    $dep = getDepartemen(getAccess());
+    $dep = THDS_getDepartemen(THDS_getAccess());
 
     echo "<select id='departemen' name='departemen' class='inputbox' style='width: 250px' onchange='clearContent()'>";
     foreach($dep as $value)

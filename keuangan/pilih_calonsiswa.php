@@ -51,7 +51,7 @@ OpenDb();
     
     <!--<select name="depart2" id="depart2" onChange="change_departemen(2)" style="width:150px" onkeypress="return focusNext('proses', event)">
    
-	<?	$dep = getDepartemen(getAccess());    
+	<?	$dep = THDS_getDepartemen(THDS_getAccess());    
         foreach($dep as $value) {
             if ($departemen == "")
                 $departemen = $value; ?>

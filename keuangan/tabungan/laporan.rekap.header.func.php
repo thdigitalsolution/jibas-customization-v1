@@ -78,7 +78,7 @@ function SelectDepartemen()
     global $dept;
 ?>
 <select id="departemen" name="departemen" style="width:188px" onchange="change_sel()">
-<?  $dep = getDepartemen(getAccess());
+<?  $dep = THDS_getDepartemen(THDS_getAccess());
     foreach($dep as $value) 
     {
         $sel = $dept == $value ? "selected" : ""; ?>

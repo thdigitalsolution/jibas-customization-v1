@@ -87,7 +87,7 @@ function change_dep() {
 <select name="departemen" id="departemen" onchange="change_dep()" style="visibility:hidden;">
 <?
 OpenDb();
-$dep = getDepartemen(getAccess());
+$dep = THDS_getDepartemen(THDS_getAccess());
 foreach($dep as $value) {
 ?>
 	<option value="<?=$value ?>" <?=StringIsSelected($departemen, $value)?> ><?=$value ?></option>

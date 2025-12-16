@@ -224,7 +224,7 @@ function show_all()
         <td width="15%"><strong>Departemen </strong></td>
         <td colspan="4">
         <select name="departemen" id="departemen" onchange="change_dep()">
-        <?	$dep = getDepartemen(getAccess());
+        <?	$dep = THDS_getDepartemen(THDS_getAccess());
             foreach ($dep as $value) { 
                 if ($departemen == "")
                     $departemen = $value ?>

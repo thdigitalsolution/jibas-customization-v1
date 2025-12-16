@@ -183,7 +183,7 @@ function show_laporan()
         <td width="15%"><strong>Departemen </strong></font></td>
         <td colspan="4">
         <select name="departemen" id="departemen" onchange="change_dep()" style="width:115px">
-        <?	$dep = getDepartemen(getAccess());
+        <?	$dep = THDS_getDepartemen(THDS_getAccess());
             foreach ($dep as $value) { 
 				if ($departemen == "")
               	$departemen = $value; ?>

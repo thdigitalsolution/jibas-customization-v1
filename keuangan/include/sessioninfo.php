@@ -47,6 +47,14 @@ function getAccess()
 		return "ALL";
 }
 
+function THDS_getAccess() 
+{
+	// old fungsi getAccess() 
+	// var_dump($_SESSION['departemenkeuangan']);
+	// echo '===';
+	return $_SESSION['departemenkeuangan'];
+}
+
 function getIdUser() 
 {
 	return $_SESSION['login'];

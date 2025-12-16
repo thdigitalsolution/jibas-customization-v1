@@ -33,7 +33,7 @@ function ShowSelectDepartemen()
         echo "<option value='ALL' $sel>Semua Departemen</option>";
     }
 
-    $dep = getDepartemen(getAccess());
+    $dep = THDS_getDepartemen(THDS_getAccess());
     foreach($dep as $value)
     {
         if ($departemen == "") $departemen = $value;

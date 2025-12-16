@@ -181,7 +181,7 @@ function change_tahunbuku()
         <td colspan="4">
         <select name="departemen" id="departemen" style="width:115px" onchange="change_dep()">
         <?	OpenDb();
-			$dep = getDepartemen(getAccess());
+			$dep = THDS_getDepartemen(THDS_getAccess());
             foreach ($dep as $value) { 
                 if ($departemen == "")
                     $departemen = $value ?>
